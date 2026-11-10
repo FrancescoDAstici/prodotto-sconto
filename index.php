@@ -16,8 +16,8 @@ $flagErrB="";
 $flagErrC="";
 
 //VALORI DA CALCOLARE
-$scontoeur="";
-$prezzoScontato="";
+$scontoeur=0;
+$prezzoScontato=0;
 
 //CLASSE DELLA CARD E RISPETTIVO TESTO
 $classe_card = "";
@@ -124,7 +124,7 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){                                     //CO
         <div class="card-box">
             <!-- La card cambia colore in base alla classe dinamica inserita con il PHP -->
             <div class="card <?php echo $classe_card; ?>">
-                <div class="prezzo-fin">Prezzo finale: <?php echo number_format($prezzoScontato,2); ?>€</div>
+                <div class="prezzo-fin">Prezzo finale: <?php echo number_format($prezzoScontato,2);?>€</div>
                 <div class="risparmio">Risparmiato: <?php echo number_format($scontoeur,2); ?>€</div>
                 <div class="fascia"><?php echo $testo_fascia; ?></div>
             </div>
